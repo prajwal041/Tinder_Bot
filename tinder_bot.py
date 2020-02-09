@@ -11,7 +11,7 @@ class TinderBot():
 
         sleep(2)
 
-        # fb_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/div/main/div/div[2]/div[2]/div/div/span/div[2]/button')
+        # login by Facebook
         fb_btn = self.driver.find_element_by_xpath('//*[@id="content"]/div/div[1]/div/div/main/div/div[2]/div[2]/div/div/div[1]/div/span/div[2]/button')
         fb_btn.click()
 
@@ -19,12 +19,15 @@ class TinderBot():
         base_window = self.driver.window_handles[0]
         self.driver.switch_to_window(self.driver.window_handles[1])
 
+        # Populate email/Phone_number
         email_in = self.driver.find_element_by_xpath('//*[@id="email"]')
         email_in.send_keys(username)
 
+        # Populate password
         pw_in = self.driver.find_element_by_xpath('//*[@id="pass"]')
         pw_in.send_keys(password)
 
+        # login popup-window
         login_btn = self.driver.find_element_by_xpath('//*[@id="u_0_0"]')
         login_btn.click()
 
