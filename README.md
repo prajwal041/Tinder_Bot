@@ -8,6 +8,7 @@ pip install selenium
 create a secrets.py file with variables:
 
  username = 'your_username'
+ 
  password = 'your_password'
  
  Please fork & add more features.
